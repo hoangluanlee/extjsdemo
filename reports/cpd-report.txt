@@ -1,0 +1,593 @@
+Found a 23 line (91 tokens) duplication in the following files: 
+Starting at line 34 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Subject.java
+Starting at line 49 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Student.java
+Starting at line 33 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Course.java
+
+	}
+
+	@Id
+	@GeneratedValue(strategy = IDENTITY)
+	@Column(name = "ID", unique = true, nullable = false)
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	@Column(name = "NAME", length = 100)
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Column(name = "DESCIPTION", length = 100, nullable=true)
+=====================================================================
+Found a 25 line (76 tokens) duplication in the following files: 
+Starting at line 25 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\SubjectSDO.java
+Starting at line 24 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\CourseSDO.java
+
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+=====================================================================
+Found a 24 line (66 tokens) duplication in the following files: 
+Starting at line 150 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\SubjectController.java
+Starting at line 188 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\ScoreController.java
+Starting at line 112 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\CourseController.java
+
+		modelMap.put("data", courses);
+		modelMap.put("success", true);
+
+		return modelMap;
+	}
+
+	/**
+	 * Generates modelMap to return in the modelAndView in case of exception
+	 * 
+	 * @param msg
+	 *            message
+	 * @return
+	 */
+	private Map<String, Object> getModelMapError(String msg) {
+
+		Map<String, Object> modelMap = new HashMap<String, Object>(2);
+		modelMap.put("message", msg);
+		modelMap.put("success", false);
+
+		return modelMap;
+	}
+
+	@Autowired
+	public void setCourseService(CourseService courseService) {
+=====================================================================
+Found a 11 line (62 tokens) duplication in the following files: 
+Starting at line 160 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\ScoreController.java
+Starting at line 176 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\ScoreController.java
+
+	private Map<String, Object> getMapSDO(List<ScoreSDO> scores) {
+
+		Map<String, Object> modelMap = new HashMap<String, Object>(3);
+		modelMap.put("total", scores.size());
+		modelMap.put("data", scores);
+		modelMap.put("success", true);
+
+		return modelMap;
+	}
+
+	private Map<String, ? extends Object> getMapSDO(ScoreSDO score) {
+=====================================================================
+Found a 24 line (62 tokens) duplication in the following files: 
+Starting at line 150 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\SubjectController.java
+Starting at line 111 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\StudentController.java
+
+		modelMap.put("data", students);
+		modelMap.put("success", true);
+
+		return modelMap;
+	}
+
+
+
+
+	/**
+	 * Generates modelMap to return in the modelAndView in case of exception
+	 * 
+	 * @param msg
+	 *            message
+	 * @return
+	 */
+	private Map<String, Object> getModelMapError(String msg) {
+
+		Map<String, Object> modelMap = new HashMap<String, Object>(2);
+		modelMap.put("message", msg);
+		modelMap.put("success", false);
+
+		return modelMap;
+	}
+=====================================================================
+Found a 19 line (53 tokens) duplication in the following files: 
+Starting at line 25 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\SubjectSDO.java
+Starting at line 44 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\StudentSDO.java
+
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSurName() {
+=====================================================================
+Found a 15 line (51 tokens) duplication in the following files: 
+Starting at line 34 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Subject.java
+Starting at line 38 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Score.java
+
+	}
+
+	@Id
+	@GeneratedValue(strategy = IDENTITY)
+	@Column(name = "ID", unique = true, nullable = false)
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
+
+	@ManyToOne(fetch = FetchType.LAZY)
+=====================================================================
+Found a 10 line (41 tokens) duplication in the following files: 
+Starting at line 119 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\SubjectController.java
+Starting at line 88 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\StudentController.java
+Starting at line 110 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\ScoreController.java
+Starting at line 89 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\CourseController.java
+
+			courseService.removeCourse(data);
+
+			Map<String, Object> modelMap = new HashMap<String, Object>(3);
+			modelMap.put("success", true);
+
+			return modelMap;
+
+		} catch (Exception e) {
+
+			return getModelMapError("Error trying to delete course.");
+=====================================================================
+Found a 4 line (33 tokens) duplication in the following files: 
+Starting at line 28 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\dao\impl\CourseDAOImpl.java
+Starting at line 44 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\dao\impl\CourseDAOImpl.java
+
+	public List<CourseSDO> updateCourse(List<CourseSDO> courseList) {
+		List<CourseSDO> newCourses = new ArrayList<CourseSDO>();
+		for (CourseSDO course : courseList) {
+			newCourses.add(updateCourse(course));
+=====================================================================
+Found a 4 line (33 tokens) duplication in the following files: 
+Starting at line 30 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\dao\impl\ScoreDAOImpl.java
+Starting at line 46 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\dao\impl\ScoreDAOImpl.java
+
+	public List<ScoreSDO> updateScore(List<ScoreSDO> scoreList) {
+		List<ScoreSDO> newScores = new ArrayList<ScoreSDO>();
+		for (ScoreSDO score : scoreList) {
+			newScores.add(updateScore(score));
+=====================================================================
+Found a 4 line (33 tokens) duplication in the following files: 
+Starting at line 29 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\dao\impl\StudentDAOImpl.java
+Starting at line 45 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\dao\impl\StudentDAOImpl.java
+
+	public List<StudentSDO> updateStudent(List<StudentSDO> studentList) {
+		List<StudentSDO> newStudents = new ArrayList<StudentSDO>();
+		for (StudentSDO student : studentList) {
+			newStudents.add(updateStudent(student));
+=====================================================================
+Found a 4 line (33 tokens) duplication in the following files: 
+Starting at line 30 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\dao\impl\SubjectDAOImpl.java
+Starting at line 46 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\dao\impl\SubjectDAOImpl.java
+
+	public List<SubjectSDO> updateSubject(List<SubjectSDO> subjectList) {
+		List<SubjectSDO> newSubjects = new ArrayList<SubjectSDO>();
+		for (SubjectSDO subject : subjectList) {
+			newSubjects.add(updateSubject(subject));
+=====================================================================
+Found a 7 line (30 tokens) duplication in the following files: 
+Starting at line 38 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\StudentSDO.java
+Starting at line 43 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Student.java
+
+			Date birthday, Set<Score> scores) {
+		this.name = name;
+		this.surName = surName;
+		this.phoneNumber = phoneNumber;
+		this.birthday = birthday;
+		this.scores = scores;
+	}
+=====================================================================
+Found a 12 line (30 tokens) duplication in the following files: 
+Starting at line 20 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\StudentSDO.java
+Starting at line 26 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Student.java
+
+public class Student implements java.io.Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6778939654660834469L;
+	private Integer id;
+	private String name;
+	private String surName;
+	private String phoneNumber;
+	private Date birthday;
+	private Set<Score> scores = new HashSet<Score>(0);
+=====================================================================
+Found a 13 line (30 tokens) duplication in the following files: 
+Starting at line 70 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\util\SubjectUtil.java
+Starting at line 75 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\util\StudentUtil.java
+Starting at line 70 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\util\ScoreUtil.java
+Starting at line 70 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\util\CourseUtil.java
+
+	}
+
+	/**
+	 * Tranform array of numbers in json data format into list of Integer
+	 * 
+	 * @param data
+	 *            - json data from request
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	public List<Integer> getListIdFromJSON(Object data) {
+		JSONArray jsonArray = JSONArray.fromObject(data);
+		List<Integer> idCourse = (List<Integer>) JSONArray.toList(jsonArray,
+=====================================================================
+Found a 8 line (29 tokens) duplication in the following files: 
+Starting at line 47 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\SubjectController.java
+Starting at line 31 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\StudentController.java
+Starting at line 30 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\CourseController.java
+
+	@RequestMapping(value = "/course/view.action")
+	public @ResponseBody
+	Map<String, ? extends Object> view(@RequestHeader("Accept") String s)
+			throws Exception {
+
+		try {
+
+			List<CourseSDO> courses = courseService.listCourse();
+=====================================================================
+Found a 12 line (28 tokens) duplication in the following files: 
+Starting at line 7 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\SubjectSDO.java
+Starting at line 16 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Subject.java
+
+public class Subject implements java.io.Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2619528342166889014L;
+	private Integer id;
+	private String name;
+	private String description;
+	private Integer numberOfClass;
+
+	public Subject() {
+=====================================================================
+Found a 5 line (27 tokens) duplication in the following files: 
+Starting at line 21 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\SubjectSDO.java
+Starting at line 30 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Subject.java
+
+	public Subject(String name, String description, Integer numberOfClass) {
+		this.name = name;
+		this.description = description;
+		this.numberOfClass = numberOfClass;
+	}
+=====================================================================
+Found a 4 line (26 tokens) duplication in the following files: 
+Starting at line 160 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\ScoreController.java
+Starting at line 108 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\CourseController.java
+
+	private Map<String, Object> getMap(List<CourseSDO> courses) {
+
+		Map<String, Object> modelMap = new HashMap<String, Object>(3);
+		modelMap.put("total", courses.size());
+=====================================================================
+Found a 7 line (26 tokens) duplication in the following files: 
+Starting at line 87 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\ScoreController.java
+Starting at line 65 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\CourseController.java
+
+	@RequestMapping(value = "/course/update.action")
+	public @ResponseBody
+	Map<String, ? extends Object> update(@RequestParam Object data)
+			throws Exception {
+		try {
+
+			List<CourseSDO> courses = courseService.updateCourse(courseUtil
+=====================================================================
+Found a 8 line (26 tokens) duplication in the following files: 
+Starting at line 69 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\ScoreController.java
+Starting at line 47 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\CourseController.java
+
+	@RequestMapping(value = "/course/create.action")
+	public @ResponseBody
+	Map<String, ? extends Object> create(@RequestParam Object data)
+			throws Exception {
+
+		try {
+
+			List<CourseSDO> courses = courseService.addCourse(courseUtil
+=====================================================================
+Found a 4 line (26 tokens) duplication in the following files: 
+Starting at line 107 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\StudentController.java
+Starting at line 160 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\ScoreController.java
+
+	private Map<String, Object> getMap(List<ScoreSDO> scores) {
+
+		Map<String, Object> modelMap = new HashMap<String, Object>(3);
+		modelMap.put("total", scores.size());
+=====================================================================
+Found a 7 line (26 tokens) duplication in the following files: 
+Starting at line 65 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\StudentController.java
+Starting at line 87 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\ScoreController.java
+
+	@RequestMapping(value = "/score/update.action")
+	public @ResponseBody
+	Map<String, ? extends Object> update(@RequestParam Object data)
+			throws Exception {
+		try {
+
+			List<ScoreSDO> scores = scoreService.updateScore(scoreUtil
+=====================================================================
+Found a 8 line (26 tokens) duplication in the following files: 
+Starting at line 47 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\StudentController.java
+Starting at line 69 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\ScoreController.java
+
+	@RequestMapping(value = "/score/create.action")
+	public @ResponseBody
+	Map<String, ? extends Object> create(@RequestParam Object data)
+			throws Exception {
+
+		try {
+
+			List<ScoreSDO> scores = scoreService.addScore(scoreUtil
+=====================================================================
+Found a 3 line (26 tokens) duplication in the following files: 
+Starting at line 148 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\SubjectController.java
+Starting at line 186 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\ScoreController.java
+
+	private Map<String, ? extends Object> getMapSDO(ScoreSDO score) {
+		Map<String, Object> modelMap = new HashMap<String, Object>(3);
+		modelMap.put("data", score);
+=====================================================================
+Found a 4 line (26 tokens) duplication in the following files: 
+Starting at line 138 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\SubjectController.java
+Starting at line 107 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\StudentController.java
+
+	private Map<String, Object> getMapSDO(List<StudentSDO> students) {
+
+		Map<String, Object> modelMap = new HashMap<String, Object>(3);
+		modelMap.put("total", students.size());
+=====================================================================
+Found a 6 line (26 tokens) duplication in the following files: 
+Starting at line 81 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\SubjectController.java
+Starting at line 65 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\StudentController.java
+
+	@RequestMapping(value = "/student/update.action")
+	public @ResponseBody
+	Map<String, ? extends Object> update(@RequestParam Object data)
+			throws Exception {
+		try {
+			List<StudentSDO> students = studentService1
+=====================================================================
+Found a 8 line (26 tokens) duplication in the following files: 
+Starting at line 63 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\SubjectController.java
+Starting at line 47 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\StudentController.java
+
+	@RequestMapping(value = "/student/create.action")
+	public @ResponseBody
+	Map<String, ? extends Object> create(@RequestParam Object data)
+			throws Exception {
+
+		try {
+
+			List<StudentSDO> students = studentService1.addStudent(studentUtil
+=====================================================================
+Found a 9 line (26 tokens) duplication in the following files: 
+Starting at line 70 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\StudentSDO.java
+Starting at line 81 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Student.java
+
+	public String getPhoneNumber() {
+		return this.phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	@Temporal(TemporalType.DATE)
+=====================================================================
+Found a 9 line (26 tokens) duplication in the following files: 
+Starting at line 51 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\SubjectSDO.java
+Starting at line 66 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Subject.java
+
+	public Integer getNumberOfClass() {
+		return this.numberOfClass;
+	}
+
+	public void setNumberOfClass(Integer numberOfClass) {
+		this.numberOfClass = numberOfClass;
+	}
+
+}
+=====================================================================
+Found a 15 line (25 tokens) duplication in the following files: 
+Starting at line 141 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\SubjectController.java
+Starting at line 149 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\SubjectController.java
+
+		Map<String, Object> modelMap = new HashMap<String, Object>(3);
+		modelMap.put("data", subjects);
+		modelMap.put("success", true);
+
+		return modelMap;
+	}
+
+	/**
+	 * Generates modelMap to return in the modelAndView in case of exception
+	 * 
+	 * @param msg
+	 *            message
+	 * @return
+	 */
+	private Map<String, Object> getModelMapError(String msg) {
+=====================================================================
+Found a 3 line (25 tokens) duplication in the following files: 
+Starting at line 138 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\SubjectController.java
+Starting at line 148 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\controller\SubjectController.java
+
+	private Map<String, ? extends Object> getMap(SubjectSDO subjects) {
+		Map<String, Object> modelMap = new HashMap<String, Object>(3);
+		modelMap.put("data", subjects);
+=====================================================================
+Found a 7 line (25 tokens) duplication in the following files: 
+Starting at line 42 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\CourseSDO.java
+Starting at line 57 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Subject.java
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+=====================================================================
+Found a 7 line (25 tokens) duplication in the following files: 
+Starting at line 34 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\CourseSDO.java
+Starting at line 48 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Subject.java
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+=====================================================================
+Found a 7 line (25 tokens) duplication in the following files: 
+Starting at line 26 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\CourseSDO.java
+Starting at line 39 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Subject.java
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+=====================================================================
+Found a 7 line (25 tokens) duplication in the following files: 
+Starting at line 62 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\StudentSDO.java
+Starting at line 72 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Student.java
+
+	public String getSurName() {
+		return this.surName;
+	}
+
+	public void setSurName(String surName) {
+		this.surName = surName;
+	}
+=====================================================================
+Found a 7 line (25 tokens) duplication in the following files: 
+Starting at line 54 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\StudentSDO.java
+Starting at line 48 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Subject.java
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+=====================================================================
+Found a 7 line (25 tokens) duplication in the following files: 
+Starting at line 46 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\StudentSDO.java
+Starting at line 39 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Subject.java
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+=====================================================================
+Found a 7 line (25 tokens) duplication in the following files: 
+Starting at line 43 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\SubjectSDO.java
+Starting at line 57 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Subject.java
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+=====================================================================
+Found a 7 line (25 tokens) duplication in the following files: 
+Starting at line 35 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\SubjectSDO.java
+Starting at line 48 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Subject.java
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+=====================================================================
+Found a 7 line (25 tokens) duplication in the following files: 
+Starting at line 27 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\sdo\SubjectSDO.java
+Starting at line 39 of D:\kien thuc\thuc tap Actsone\example\ExrJs\extjsdemo\src\main\java\com\actsone\extjsdemo\model\Subject.java
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
